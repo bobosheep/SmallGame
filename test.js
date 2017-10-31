@@ -1,8 +1,10 @@
 $(function(){
 	$("div").mouseenter(function(){
-		$("div").fadeTo('slow', 0.5);
+		height += 50px;
+		width += 50px;
 	});
 	$("div").mouseleave(function(){
-		$("div").fadeTo('slow', 1);
+		height -= 50px;
+		width -= 50px;
 	});
 });	
