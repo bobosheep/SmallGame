@@ -1,23 +1,3 @@
-$(function(){
-	/*$("div").mouseenter(function(){
-		$(this).fadeTo('slow', 0.5);
-	});
-	$('div').mouseleave(function(){
-		$(this).toggle();
-	});*/
-	$('div').mouseenter(function(){
-		$(this).animate({
-			width: '150px', 
-			height: '150px'
-		}, 500);
-	});
-	$('div').mouseleave(function(){
-		$(this).animate({
-			width: '100px',
-			height: '100px'
-		}, 500);
-	});
-});
 px=py=10;
 gs=tc=20;
 ax=ay=15;
