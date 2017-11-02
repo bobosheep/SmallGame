@@ -9,3 +9,12 @@
 	height: 100px;
 	width: 100px;
 }
+#highscore{
+	color: red;
+	font-size: 30px;
+	height: 100px;
+	width: 200px;
+	left: 550px;
+	top: 50px;
+	position: absolute;
+}

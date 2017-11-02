@@ -4,6 +4,7 @@ ax=ay=15;
 xv=yv=0;
 trail=[];
 tail=5;
+highscore = 0;
 $(document).ready(function(){
 	canv = $('.bg');
 	ctx = $('.bg')[0].getContext('2d');
@@ -82,11 +83,26 @@ $(document).ready(function(){
 		if(ax == px && ay == py){
 			tail++;
 			score += 20;
-			ax = Math.floor(Math.random() * tc);
-			ay = Math.floor(Math.random() * tc);
+			var isOnsnake = true;
+			while(isOnsnake){
+				ax = Math.floor(Math.random() * tc);
+				ay = Math.floor(Math.random() * tc);
+				isOnsnake = false;
+				for(var i = 0 ; i < trail.length ; i++){
+					if(ax == trail[i].x && ay == trail[i].y){
+						isOnsnake = true;
+						break;
+					}
+ 				}
+			}
 		}
 		
-		$(p).html('Your score is ' + score);
+		$('#scoreboard').text('Your score is ' + score);
+		if(score > highscore){
+			$('#highscore').text('High Score ' + score);
+			highscore = score;
+		}
+		
 		
 	}, 1000/15);
 });
