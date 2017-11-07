@@ -8,6 +8,30 @@ highscore = 0;
 $(document).ready(function(){
 	canv = $('.bg');
 	ctx = $('.bg')[0].getContext('2d');
+	$('#left').on('click', function (){
+		if(xv != 1){
+			xv = -1;
+			yv = 0;
+		}
+	});
+	$('#up').on('click', function (){
+		if(yv != 1){
+			xv = 0;
+			yv = -1;
+		}
+	});
+	$('#right').on('click', function() {
+		if(xv != -1){
+			xv = 1;
+			yv = 0;
+		}
+	});
+	$('#down').on('click', function (){
+		if(yv != -1){
+			xv = 0;
+			yv = 1;
+		}
+	});
 	$(document).on('keydown', function( event ){
 		switch(event.which){
 			case 37:
@@ -97,9 +121,9 @@ $(document).ready(function(){
 			}
 		}
 		
-		$('#scoreboard').text('Your score is ' + score);
+		$('#scoreboard').text('Score: ' + score);
 		if(score > highscore){
-			$('#highscore').text('High Score ' + score);
+			$('#highscore').text('High Score: ' + score);
 			highscore = score;
 		}
 		
