@@ -1,7 +1,7 @@
 body {
     background-image: url("./img/firstweb.jpg");
-	background-repeat: no-repeat;
-	background-size: 1347px 678px;
+	background-repeat: round;
+	background-size: contain;
 }
 
 #scoreboard{
