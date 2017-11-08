@@ -1,13 +1,11 @@
-#red{
-	background-color: red;
-	height: 100px;
-	width: 100px;
-	left: 20px;
+body {
+    background-image: url("./img/firstweb.jpg");
+	background-repeat: no-repeat;
+	background-size: 1347px 678px;
 }
-#blue{
-	background-color: blue;
-	height: 100px;
-	width: 100px;
+
+#scoreboard{
+	color: yellow;
 }
 #highscore{
 	color: red;
