@@ -4,6 +4,7 @@ ax=ay=15;
 xv=yv=0;
 trail=[];
 tail=5;
+start=0;
 highscore = 0;
 $(document).ready(function(){
 	canv = $('.bg');
@@ -13,24 +14,28 @@ $(document).ready(function(){
 			xv = -1;
 			yv = 0;
 		}
+		start = 1;
 	});
 	$('#up').on('click', function (){
 		if(yv != 1){
 			xv = 0;
 			yv = -1;
 		}
+		start = 1;
 	});
 	$('#right').on('click', function() {
 		if(xv != -1){
 			xv = 1;
 			yv = 0;
 		}
+		start = 1;
 	});
 	$('#down').on('click', function (){
 		if(yv != -1){
 			xv = 0;
 			yv = 1;
 		}
+		start = 1;
 	});
 	$(document).on('keydown', function( event ){
 		switch(event.which){
@@ -38,25 +43,33 @@ $(document).ready(function(){
 				if(xv == 1 && yx == 0){
 					break;
 				}
-				xv=-1;yv=0;
+				xv=-1;
+				yv=0;
+				start = 1;
 				break;
 			case 38:
 				if(xv == 0 && yx == 1){
 					break;
 				}
-				xv=0;yv=-1;
+				xv=0;
+				yv=-1;
+				start = 1;
 				break;
 			case 39:
 				if(xv == -1 && yx == 0){
 					break;
 				}
-				xv=1;yv=0;
+				xv=1;
+				yv=0;
+				start = 1;
 				break;
 			case 40:
 				if(xv == 0 && yx == -1){
 					break;
 				}
-				xv=0;yv=1;
+				xv=0;
+				yv=1;
+				start = 1;
 				break;
 		}
 	});
@@ -93,6 +106,10 @@ $(document).ready(function(){
 			if(trail[i].x == px && trail[i].y == py){
 				tail = 5;
 				score = 0;
+				if(start)
+				{
+					alert('You Die!');
+				}
 			}
 		}
 		
