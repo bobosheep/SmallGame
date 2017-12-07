@@ -1,4 +1,5 @@
-px=py=10;
+px=10;
+py=10;
 gs=tc=20;
 ax=ay=15;
 xv=yv=0;
@@ -40,7 +41,7 @@ $(document).ready(function(){
 	$(document).on('keydown', function( event ){
 		switch(event.which){
 			case 37:
-				if(xv == 1 && yx == 0){
+				if(xv == 1 && yv == 0){
 					break;
 				}
 				xv=-1;
@@ -48,7 +49,7 @@ $(document).ready(function(){
 				start = 1;
 				break;
 			case 38:
-				if(xv == 0 && yx == 1){
+				if(xv == 0 && yv == 1){
 					break;
 				}
 				xv=0;
@@ -56,7 +57,7 @@ $(document).ready(function(){
 				start = 1;
 				break;
 			case 39:
-				if(xv == -1 && yx == 0){
+				if(xv == -1 && yv == 0){
 					break;
 				}
 				xv=1;
@@ -64,7 +65,7 @@ $(document).ready(function(){
 				start = 1;
 				break;
 			case 40:
-				if(xv == 0 && yx == -1){
+				if(xv == 0 && yv == -1){
 					break;
 				}
 				xv=0;
@@ -93,11 +94,18 @@ $(document).ready(function(){
 		ctx.fillRect(0, 0, canv.width(), canv.height());
 		
 		ctx.fillStyle='lime';
+		
 		for(var i = 0 ; i < trail.length; i++){
 			//if(i == trail.length - 1){
 				ctx.beginPath(); 
 				ctx.arc(trail[i].x* gs + gs / 2, trail[i].y * gs + gs / 2, gs / 2, 0, 2 * Math.PI);
-				ctx.fillStyle='lime';
+				if(i == 0){
+					ctx.fillStyle='darkgreen';
+				}
+				else if (i == 1) {
+					ctx.fillStyle='green';
+				} 
+				else ctx.fillStyle='lime';
 				ctx.closePath(); 
 				ctx.fill(); 
 				//continue;
@@ -112,14 +120,14 @@ $(document).ready(function(){
 				}
 			}
 		}
-		
-		ctx.fillStyle='red';
-		ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2);
-		
 		trail.push({x:px, y:py});
 		while(trail.length > tail){
 			trail.shift();
 		}
+		ctx.fillStyle='red';
+		ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2);
+		
+		
 		
 		if(ax == px && ay == py){
 			tail++;
@@ -143,7 +151,8 @@ $(document).ready(function(){
 			$('#highscore').text('High Score: ' + score);
 			highscore = score;
 		}
-		
+		$('#snake-pos').text('Snake at ( ' + px + ' , ' + py + ' )');
+		$('#score-pos').text('Point at ( ' + ax + ' , ' + ay + ' )');
 		
 	}, 1000/15);
 });

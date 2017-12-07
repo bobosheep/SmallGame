@@ -1,7 +1,7 @@
 body {
     background-image: url("./img/firstweb.jpg");
 	background-repeat: round;
-	background-size: contain;
+	background-size: cover;
 }
 
 #scoreboard{
@@ -14,7 +14,7 @@ body {
 canvas{
 	left: 50%;
     margin-left: -200px;
-    top: 15%;
+    top: 17%;
     position: absolute;
 }
 
@@ -32,14 +32,27 @@ canvas{
 	font-size: 25px;
 }
 
+.object-pos {
+	color: #2502a1;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 400px;
+	margin-top: 425px;
+}
+
+
+.object-pos > div {
+	display: inline-block;
+	font-size: 20px
+}
 
 .controler{
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	width: 400px;    
-	margin-top: 522px;
-    top: 20%;
+	margin-top: 15px;
 	display: none;
 }
 

