@@ -1,7 +1,24 @@
 <html>
     <head>
     </head>
-    <body ng-app="myApp">
-        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    
+    <body data-ng-app="myApp">
+        <div class="GameName">
+            <div class="Container"></div>
+            </div>
+        </div>
+        <div class="levelList" data-ng-controller="mainController">
+            <div class="Container">
+                <div class="level" data-ng-repeat="Level in levels">
+                    <div >{{Level.level}}</div>
+                    <div >{{Level.detail}}</div>
+                </div>
+            </div>
+        </div>
     </body>
+    <script>var app = angular.module('myApp', []);</script>
+    <script src="js/mainController.js" ></script>
+    <script src="js/mainDirective.js" ></script>
 </html>
