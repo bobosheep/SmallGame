@@ -4,16 +4,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
     
-    <body data-ng-app="myApp">
+    <body ng-app="myApp">
         <div class="GameName">
             <div class="Container"></div>
             </div>
         </div>
-        <div class="levelList" data-ng-controller="mainController">
+        <div class="levelList" ng-controller="mainController">
             <div class="Container">
-                <div class="level" data-ng-repeat="Level in levels">
-                    <div >{{Level.level}}</div>
-                    <div >{{Level.detail}}</div>
+                <div class="level" ng-repeat="Level in levels">
+                    <div ng-click="go(Level)">{{Level.level}}</div>
+                    <div ng-click="go(Level)">{{Level.detail}}</div>
                 </div>
             </div>
         </div>

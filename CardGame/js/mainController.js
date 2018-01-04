@@ -12,4 +12,7 @@ app.controller('mainController', ['$scope', function($scope){
         detail: '6 * 6',
     }
     ];
+    $scope.go = function(levels){
+        window.location.href = 'level' + levels.level + '.html';
+    };
 }]);
