@@ -12,13 +12,18 @@
     <body ng-app="myApp">
         <div class="GameName">
             <div class="container">
+                <img >
             </div>
         </div>
         <div class="levelList" ng-controller="mainController">
             <div class="container">
-                <div class="row level" ng-repeat="Level in levels">
-                    <div class="col" ng-click="go(Level)">LEVEL:     {{Level.level}}</div>
-                    <div class="col" ng-click="go(Level)">puzzlesize: {{Level.detail}}</div>
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-2 col-md-auto">   LEVEL   </div>
+                    <div class="col-lg-2 col-md-auto">  PUZZLES  </div>
+                </div>
+                <div class="row justify-content-md-center" ng-repeat="Level in levels">
+                    <div class="col-lg-2 col-md-auto" >{{Level.level}}</div>
+                    <div class="col-lg-2 col-md-auto" ng-click="go(Level)">{{Level.detail}}</div>
                 </div>
             </div>
         </div>
