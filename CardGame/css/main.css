@@ -1,0 +1,42 @@
+.bg-green{
+    background-color: var(--green);
+    color: white;
+}
+.bg-green:hover{
+    background-color: rgba(0, 128, 0, 0.3);
+    color: white;
+}
+
+.bg-red{
+    background-color: var(--red);
+    color: white;
+}
+.bg-red:hover{
+    background-color: rgba(255,0, 0, 0.3);
+    color: white;
+}
+.bg-blue{
+    background-color: var(--blue);
+    color: white;
+}
+.bg-blue:hover{
+    background-color: rgba(25, 0, 255, 0.3);
+    color: white;
+}
+.bg-teal{
+    background-color: var(--teal);
+    color:var(--white);
+}
+.bg-teal:hover{
+    background-color: var(--teal);
+    opacity: 0.3;
+    color:var(--white);
+}
+.bg-indigo{
+    background-color: var(--indigo);
+    color:var(--white);
+}
+.bg-pink{
+    background-color: var(--pink);
+    color:var(--white);
+}

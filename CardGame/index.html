@@ -5,28 +5,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
     </head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
     
     <body ng-app="myApp">
-        <div class="GameName">
-            <div class="container">
-                <img >
-            </div>
-        </div>
-        <div class="levelList" ng-controller="mainController">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-lg-2 col-md-auto">   LEVEL   </div>
-                    <div class="col-lg-2 col-md-auto">  PUZZLES  </div>
-                </div>
-                <div class="row justify-content-md-center" ng-repeat="Level in levels">
-                    <div class="col-lg-2 col-md-auto" >{{Level.level}}</div>
-                    <div class="col-lg-2 col-md-auto" ng-click="go(Level)">{{Level.detail}}</div>
+        <div class="container">
+            <div class="GameName">
+                <div class="container justify-content-md-center">
+                    <div class="justify-content-md-center" style="text-align:center"> <h2>CARD GAME </h2></div>
+                                          
                 </div>
             </div>
-        </div>
+            <div class="levelList " ng-controller="mainController">
+                <div class="container" style="text-align:center">
+                    <div class="row justify-content-md-center" >
+                        <div class="col col-md-1" >   LEVEL   </div>
+                        <div class="col col-md-5" >  PUZZLES  </div>
+                    </div>
+                    <div class="row justify-content-md-center" ng-repeat="Level in levels">
+                        <div class="col col-md-1 bg-blue" >{{Level.level}}</div>
+                        <div class="col col-md-5 bg-teal"  ng-click="go(Level)">{{Level.detail}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <canvas></canvas>    
+            </div>
+        </div>    
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
