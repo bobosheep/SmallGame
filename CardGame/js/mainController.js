@@ -5,11 +5,11 @@ app.controller('mainController', ['$scope', function($scope){
     },
     {
         level: '2',
-        detail: '5 * 5',
+        detail: '6 * 6',
     },
     {
         level: '3',
-        detail: '6 * 6',
+        detail: '8 * 8',
     }
     ];
     $scope.go = function(levels){
