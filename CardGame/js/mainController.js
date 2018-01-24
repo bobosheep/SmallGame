@@ -5,17 +5,16 @@ app.controller('mainController', ['$scope', function($scope){
     },
     {
         level: '2',
-        detail: '6 * 6',
+        detail: '5 * 6',
     },
     {
         level: '3',
-        detail: '8 * 8',
-    }
-    ];
+        detail: '6 * 7',
+    }];
     $scope.go = function(levels){
         window.location.href = 'level' + levels.level + '.html';
     };
-    $scope.card = [{
+    $scope.cards = [{
         img: '1',
         name: 'orange',
         src: 'https://goo.gl/u7sXNm',
@@ -29,11 +28,11 @@ app.controller('mainController', ['$scope', function($scope){
         src:  'https://goo.gl/4HcdNb',
     },{
         img: '4',
-        name: 'strawberry'
+        name: 'strawberry',
         src:  'https://goo.gl/VLGSVE',
     },{
         img: '5',
-        name: 'watermelon'
+        name: 'watermelon',
         src:  'https://goo.gl/KDH9Yg',
     },{
         img: '6',
