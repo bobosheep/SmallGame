@@ -10,13 +10,18 @@
     <body ng-app="myApp">
         <h1 class="level-title">LEVEL 1</h1>
         <div class="container" ng-controller="mainController">
-            <div class="row justify-content-md-center" ng-repeat="card in cards" >
-                <div class="col" ><img src="https://goo.gl/fxQFZG" onclick="check(card)"></div>
+            <div class="row justify-content-md-center" ng-repeat="colcard in cards " >
+                <div class="col" ng-repeat="rowcard in colcard">
+                    
+                    <img class="circle-img" src="https://goo.gl/fxQFZG" ng-click="check(rowcard)" id="img{{rowcard.img}}">
+                    
+                </div>
             </div>
         </div>
 
     </body>
     <script>var app = angular.module('myApp', []);</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="js/mainController.js" ></script>
     <script src="js/mainDirective.js" ></script>
 </html>
