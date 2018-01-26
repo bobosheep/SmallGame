@@ -13,8 +13,8 @@
             <div class="row justify-content-md-center" ng-repeat="colcard in cards " >
                 <div class="col" ng-repeat="rowcard in colcard">
                     
-                    <img class="circle-img" src="https://goo.gl/fxQFZG" ng-click="check(rowcard)" id="img{{rowcard.img}}">
-                    
+                    <img class="circle-img" ng-src="{{rowcard.or_src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                    {{rowcard.or_src}}
                 </div>
             </div>
         </div>
