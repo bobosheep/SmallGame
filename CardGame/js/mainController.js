@@ -133,6 +133,7 @@ app.controller('mainController', ['$scope', function($scope){
     $scope.openCard = 0;
     $scope.finish = false;
     $scope.firstCard = '';
+    $scope.timing = 0.0;
     $scope.go = function(l){
         window.location.href = 'level' + l.level + '.html';
         
@@ -140,15 +141,20 @@ app.controller('mainController', ['$scope', function($scope){
     $scope.shuffleCards = function(){
         $scope.cards.sort(function(){ return 0.5 - Math.random()});
     };
+    function abc(){
+
+    };
     $scope.coverAllCards = function(){
         for(let i = 0 ; i < 16 ; i++){
-           // for(let j = 0; j < 4 ; j++){
-                var tis = $scope.cards[i];
-                setTimeout(function(){
+            var tis = $scope.cards[i];
+            setTimeout(function(){
+                $scope.$apply(function(){
                     $scope.cards[i].state = true;
-                }, 0);
-           // }
+                    $scope.cards[i].pair = false;
+                });
+            }, 0);
         }
+        $scope.timing = 0.0;
         $scope.shuffleCards();
     };
     $scope.check = function(id){
@@ -162,20 +168,24 @@ app.controller('mainController', ['$scope', function($scope){
         }
         else if($scope.openCard === 2){
             
-            //sleep(1000);
-            
             if(id.name === $scope.firstCard){
                 for(let i = 0 ; i < 16 ; i++){
-                    //for(let j = 0; j < 4 ; j++){
-                        var tis = $scope.cards[i];
-                        if(tis.name === $scope.firstCard){
-                            console.log(tis.name);
-                            $scope.cards[i].pair = true;
-                            //alert('paired');
-                        }
-                   // }
+                   var tis = $scope.cards[i];
+                    if(tis.name === $scope.firstCard){
+                        console.log(tis.name);
+                        $scope.cards[i].pair = true;
+                        //alert('paired');
+                    }
                 }
             }
+            var cnt = 0;
+            for(let i = 0; i < 16 ; i++){
+                if($scope.cards[i].pair){
+                    cnt++;
+                }
+            }
+            
+            
 
             $scope.openCard = 0;
             
@@ -191,7 +201,10 @@ app.controller('mainController', ['$scope', function($scope){
                     }
                 //}
             }
-            
+            if(cnt === 16){
+                window.alert('Finish');
+                cnt = 0;
+            }
         
         }
         
