@@ -1,3 +1,16 @@
+.txt-center{
+    text-align: center;
+}
+.w-30pa-h-30{
+    width: 30%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.mar-10{
+    margin-top: 10;
+    margin-bottom: 10;
+}
 .bg-green{
     background-color: var(--green);
     color: white;
@@ -44,9 +57,25 @@
 img{
     width: 100px;
     height: 100px;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .circle-img {
     border-radius: 5px;
+}
+
+.level1-card {
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    position: static;
+}
+
+.mycontainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

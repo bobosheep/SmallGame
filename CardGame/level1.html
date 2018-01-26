@@ -8,14 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
 
     <body ng-app="myApp">
-        <h1 class="level-title">LEVEL 1</h1>
+        <h1 class="level-title txt-center">LEVEL 1</h1>
+        
         <div class="container" ng-controller="mainController">
-            <div class="row justify-content-md-center" ng-repeat="colcard in cards " >
-                <div class="col" ng-repeat="rowcard in colcard">
-                    
-                    <img class="circle-img" ng-src="{{rowcard.or_src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
-                    {{rowcard.or_src}}
+            <div class="col-6 offset-sm-3">
+                <div class="row align-items-center">
+                    <div class="col-3 mar-10 align-items-center" ng-repeat="rowcard in cards " >
+                        <img class="circle-img" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                    </div>
                 </div>
+            </div>
+            <div class="circle-img bg-teal txt-center w-30pa-h-30" ng-click="coverAllCards()">
+                reset
             </div>
         </div>
 
