@@ -130,19 +130,20 @@ app.controller('mainController', ['$scope', function($scope){
         pair: false,
         state: true
     }];
-    $scope.openCard = 0;
+    $scope.openCard = -1;
     $scope.finish = false;
     $scope.firstCard = '';
     $scope.timing = 0.0;
-    $scope.go = function(l){
-        window.location.href = 'level' + l.level + '.html';
-        
+    $scope.start = true;
+    var st;
+    $scope.startClock = function(){
+        st = setTimeout(function(){
+            $scope.$digest($scope.timing += 0.01);
+            $scope.startClock();
+        }, 10);
     };
     $scope.shuffleCards = function(){
         $scope.cards.sort(function(){ return 0.5 - Math.random()});
-    };
-    function abc(){
-
     };
     $scope.coverAllCards = function(){
         for(let i = 0 ; i < 16 ; i++){
@@ -155,9 +156,21 @@ app.controller('mainController', ['$scope', function($scope){
             }, 0);
         }
         $scope.timing = 0.0;
+        $scope.start = true;
+        $scope.openCard = -1;
+        clearTimeout(st);
         $scope.shuffleCards();
     };
+    $scope.go = function(l){
+        $scope.coverAllCards();
+        window.location.href = 'level' + l.level + '.html';
+        
+    };
     $scope.check = function(id){
+        if($scope.openCard === -1){
+            $scope.startClock();
+            $scope.openCard++;
+        }
         if(id.state)   {
             $scope.openCard++;
             id.state = false;
@@ -172,7 +185,7 @@ app.controller('mainController', ['$scope', function($scope){
                 for(let i = 0 ; i < 16 ; i++){
                    var tis = $scope.cards[i];
                     if(tis.name === $scope.firstCard){
-                        console.log(tis.name);
+                        //console.log(tis.name);
                         $scope.cards[i].pair = true;
                         //alert('paired');
                     }
@@ -202,7 +215,8 @@ app.controller('mainController', ['$scope', function($scope){
                 //}
             }
             if(cnt === 16){
-                window.alert('Finish');
+                window.alert('Finish'+ $scope.timing.toFixed(2));
+                clearTimeout(st);
                 cnt = 0;
             }
         

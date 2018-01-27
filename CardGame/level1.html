@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
+    
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
 
@@ -12,13 +13,13 @@
         
         <div class="container" ng-controller="mainController">
             <div class="col-6 offset-sm-3">
-                <div class="row align-items-center">
-                    <div class="col-3 mar-10 align-items-center" ng-repeat="rowcard in cards " >
+                <div class="row align-items-center" ng-init="coverAllCards();" >
+                    <div class="col-3 col-sm-3 mar-10 align-items-center" ng-repeat="rowcard in cards " >
                         <img class="circle-img" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                     </div>
                 </div>
             </div>
-            <div class="txt-center" style="font-size: 25px;">{{ timing | number}}</div>
+            <div class="txt-center" style="font-size: 25px;" > {{ timing.toFixed(2) | number}}</div>
             
             <div class="circle-img bg-teal txt-center w-30pa-h-30" ng-click="coverAllCards()">
                 reset
