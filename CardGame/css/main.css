@@ -11,6 +11,15 @@
     margin-top: 10;
     margin-bottom: 10;
 }
+
+.color-white{
+    color: var(--white);
+}
+
+.color-light{
+    color: var(--light);
+}
+
 .bg-green{
     background-color: var(--green);
     color: white;
@@ -45,6 +54,15 @@
     opacity: 0.3;
     color:var(--white);
 }
+.bg-success{
+    background-color: rgb(40, 167, 69) ;
+    color:white;
+}
+.bg-success:hover{
+    background-color: rgb(42, 167, 63, 0.3);
+    color: white;
+}
+
 .bg-indigo{
     background-color: var(--indigo);
     color:var(--white);
@@ -59,10 +77,21 @@ img{
     height: 10vw;
     max-width: 100px;
     max-height: 100px;
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 50px;
+    min-height: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+
+img:hover{
+    animation-name: wave;
+    animation-duration: 0.5s;
+}
+
+@keyframes wave{
+    0%{-webkit-transform: rotate(15deg); transform: rotate(15deg);}
+    50%{-webkit-transform: rotate(-15deg); transform: rotate(-15deg);}
+    100%{-webkit-transform: rotate(15deg); transform: rotate(15deg);}
 }
 
 .circle-img {
@@ -82,4 +111,9 @@ img{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+body{
+    background-image: url('http://wallpoper.com/images/00/31/33/51/black-background_00313351.jpg');
+    background-size: cover;
 }
