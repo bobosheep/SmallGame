@@ -12,11 +12,11 @@
     <body ng-app="myApp">
         <h1 class="level-title txt-center color-light">LEVEL 1</h1>
         
-        <div class="container" ng-controller="mainController">
-            <div class="col-6 offset-3 container" style="margin-left:12vw;"> 
-                <div class="row align-items-center" style="width:70vw;" ng-init="coverAllCards();" >
+        <div class="container justify-content-center" ng-controller="mainController">
+            <div class="col-6 offset-3 container justify-content-center" style="margin-left:12vw;"> 
+                <div class="row align-items-center justify-content-center" style="width:70vw;" ng-init="coverAllCards();" >
                     <div class="col-3 col-sm-3 mar-10 justify-content-center" ng-repeat="rowcard in cards " >
-                        <img class="circle-img" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                        <img cards class="circle-img" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 {{ timing.toFixed(2) | number }}
             </div>
             <div class="row justify-content-center">
-                <div class="col-2 circle-img bg-success txt-center" ng-click="coverAllCards()">
+                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
                     Reset
                 </div>
                 <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
@@ -37,7 +37,7 @@
 
     </body>
     <script>var app = angular.module('myApp', ['ngAnimate']);</script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="js/mainController.js" ></script>
-    <script src="js/mainDirective.js" ></script>
+    <!--script src="js/mainDirective.js" ></script-->
 </html>

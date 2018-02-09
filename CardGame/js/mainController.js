@@ -21,112 +21,112 @@ app.controller('mainController', ['$scope', function($scope){
         img: '1',
         name: 'orange',
         src: 'https://goo.gl/u7sXNm',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '2',
         name: 'banana',
         src:  'https://goo.gl/YWmbS8',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '3',
         name: 'apple',
         src:  'https://goo.gl/4HcdNb',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '4',
         name: 'strawberry',
         src:  'https://goo.gl/VLGSVE',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '5',
         name: 'orange',
         src: 'https://goo.gl/u7sXNm',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '6',
         name: 'banana',
         src:  'https://goo.gl/YWmbS8',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '7',
         name: 'apple',
         src:  'https://goo.gl/4HcdNb',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '8',
         name: 'strawberry',
         src:  'https://goo.gl/VLGSVE',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '9',
         name: 'watermelon',
         src:  'https://goo.gl/KDH9Yg',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '10',
         name: 'grape',
         src:  'https://goo.gl/3of6tv',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '11',
         name: 'guava',
         src:  'https://goo.gl/SdXajM',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '12',
         name: 'lemon',
         src:  'https://goo.gl/pWgCvu',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '13',
         name: 'watermelon',
         src:  'https://goo.gl/KDH9Yg',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '14',
         name: 'grape',
         src:  'https://goo.gl/3of6tv',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '15',
         name: 'guava',
         src:  'https://goo.gl/SdXajM',
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',
+        or_src: 'https://goo.gl/KLNiWb',
         pair: false,
         state: true
     },{
         img: '16',
         name: 'lemon',
         src:  'https://goo.gl/pWgCvu',//正面
-        or_src: 'https://upload.wikimedia.org/wikipedia/zh/thumb/5/5d/National_Chung_Cheng_University_logo.svg/1074px-National_Chung_Cheng_University_logo.svg.png',//背面
+        or_src: 'https://goo.gl/KLNiWb',//背面
         pair: false,
         state: true
     }];
@@ -146,22 +146,47 @@ app.controller('mainController', ['$scope', function($scope){
     $scope.shuffleCards = function(){
         $scope.cards.sort(function(){ return 0.5 - Math.random()});
     };
+
     $scope.coverAllCards = function(){
+        var maplist = [];
+        $scope.shuffleCards();
         for(let i = 0 ; i < 16 ; i++){
-            var tis = $scope.cards[i];
-            setTimeout(function(){
+            var id = '#img'+$scope.cards[i].img;
+            var xy = {  x: $(id).parent().prop('x'),
+                        y: $(id).parent().prop('y')   }
+            console.log(xy);
+            maplist.push(xy);
+            var tmp1 = setTimeout(function(){
                 $scope.$apply(function(){
                     $scope.cards[i].state = true;
                     $scope.cards[i].pair = false;
                 });
-            }, 0);
+            },0);
+            
+            $(id).css({'position':'fixed'});
+            $(id).animate({
+                left: '40vw',
+                top: '20vw',
+            }, 'slow');
         }
+        
+        setTimeout(function(){
+            for(let i = 0 ; i < 16 ; i++){
+                var id = '#img'+$scope.cards[i].img;
+                $(id).css({'position':'relative'});
+                $(id).animate({
+                    left: '0',
+                    top: '0',
+                }, 'slow');
+                
+            }
+        }, 2000);
+        
 
         $scope.timing = 0.0;
         $scope.start = true;
         $scope.openCard = -1;
         clearTimeout(st);
-        $scope.shuffleCards();
     };
     $scope.go = function(l){
         $scope.coverAllCards();
