@@ -165,28 +165,34 @@ app.controller('mainController', ['$scope', function($scope){
             
             $(id).css({'position':'fixed'});
             $(id).animate({
-                left: '40vw',
-                top: '20vw',
+                left: '45vw',
+                top: '15vw',
             }, 'slow');
         }
         
-        setTimeout(function(){
+       //    setTimeout(function(){
             for(let i = 0 ; i < 16 ; i++){
                 var id = '#img'+$scope.cards[i].img;
-                $(id).css({'position':'relative'});
-                $(id).animate({
-                    left: '0',
-                    top: '0',
-                }, 'slow');
                 
+                $(id).animate({
+                    left: 'auto',
+                    top: 'auto',
+                }, 'slow');
+            }
+        //}, 600);
+        var t1 = setTimeout(function(){
+            for(let i = 0 ; i < 16 ; i++){
+                var id = '#img'+$scope.cards[i].img;
+                $(id).css({'position':'static',  'left': 'auto', 'top': 'auto'});
+            
             }
         }, 2000);
-        
-
+       
         $scope.timing = 0.0;
         $scope.start = true;
         $scope.openCard = -1;
         clearTimeout(st);
+        //clearTimeout(t1);
     };
     $scope.go = function(l){
         $scope.coverAllCards();

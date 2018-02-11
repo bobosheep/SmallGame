@@ -9,20 +9,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
     
-    <body ng-app="myApp">
+    <body ng-app="myApp" ng-controller="mainController">
         <h1 class="level-title txt-center color-light">LEVEL 1</h1>
         
-        <div class="container justify-content-center" ng-controller="mainController">
-            <div class="col-6 offset-3 container justify-content-center" style="margin-left:12vw;"> 
-                <div class="row align-items-center justify-content-center" style="width:70vw;" ng-init="coverAllCards();" >
-                    <div class="col-3 col-sm-3 mar-10 justify-content-center" ng-repeat="rowcard in cards " >
-                        <img cards class="circle-img" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+        <div class="container justify-content-center" >
+            <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
+                <div class="row justify-content-around" ng-init="coverAllCards();" >
+                    <div class="col-3 mar-5" ng-repeat="rowcard in cards " >
+                        <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                          ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                     </div>
                 </div>
             </div>
             <div class="txt-center color-light" style="font-size: 25px;"> 
                 {{ timing.toFixed(2) | number }}
             </div>
+            
+            
+
+        </div>
+        <div class="container justify-content-center">
+
             <div class="row justify-content-center">
                 <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
                     Reset
@@ -31,8 +38,6 @@
                     Back
                 </div>
             </div>
-            
-
         </div>
 
     </body>

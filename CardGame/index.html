@@ -21,13 +21,12 @@
             </div>
             <div class="levelList " ng-controller="mainController">
                 <div class="container" style="text-align:center">
-                    <div class="row justify-content-md-center" >
-                        <div class="col col-md-1" >   LEVEL   </div>
-                        <div class="col col-md-5" >  PUZZLES  </div>
                     </div>
-                    <div class="row justify-content-md-center" ng-repeat="Level in levels">
-                        <div class="col col-md-1 bg-blue" >{{Level.level}}</div>
-                        <div class="col col-md-5 bg-teal"  ng-click="go(Level)">{{Level.detail}}</div>
+                    <div class="row justify-content-center " ng-repeat="Level in levels">
+                        <div class="col col-md-5 bg-teal f-25"  ng-click="go(Level)">
+                            <div class="col bg-darkblue" >Level {{Level.level}}</div>
+                            <p class = "txt-center"><b>{{Level.detail}}</b></p>
+                        </div>
                     </div>
                 </div>
             </div>
