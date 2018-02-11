@@ -186,7 +186,7 @@ app.controller('mainController', ['$scope', function($scope){
                 $(id).css({'position':'static',  'left': 'auto', 'top': 'auto'});
             
             }
-        }, 2000);
+        }, 1700);
        
         $scope.timing = 0.0;
         $scope.start = true;
