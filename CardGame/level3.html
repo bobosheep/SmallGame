@@ -4,12 +4,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
+    
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
+    
+    <body ng-app="myApp" ng-controller="mainController">
+        <h1 class="level-title txt-center color-light">LEVEL 2</h1>
+        
+        <div class="container justify-content-center" >
+            <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
+                <div class="row justify-content-around" ng-init="level = 'level3'; coverAllCards(); " >
+                    <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
+                        <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                          ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                    </div>
+                </div>
+            </div>
+            <div class="txt-center color-light" style="font-size: 25px;"> 
+                {{ timing.toFixed(2) | number }} sec
+            </div>
+            
+            
 
-    <body>
-        <h1 class="level-title">LEVEL 3</h1>
+        </div>
+        <div class="container justify-content-center" >
+
+            <div class="row justify-content-center" ">
+                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
+                    Reset
+                </div>
+                <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
+                    Back
+                </div>
+            </div>
+        </div>
+
     </body>
-    <script>var app = angular.module('myApp', []);</script>
-    <script src="js/mainController.js" ></script>
-    <script src="js/mainDirective.js" ></script>
+    <script>var app = angular.module('myApp', ['ngAnimate']);</script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="js/levelController.js" ></script>
+    <!--script src="js/mainDirective.js" ></script-->
 </html>

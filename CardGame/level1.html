@@ -14,8 +14,8 @@
         
         <div class="container justify-content-center" >
             <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
-                <div class="row justify-content-around" ng-init="coverAllCards();" >
-                    <div class="col-3 mar-5" ng-repeat="rowcard in cards " >
+                <div class="row justify-content-around" ng-init="level = 'level1'; coverAllCards(); " >
+                    <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
                         <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
                           ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                     </div>
@@ -28,10 +28,10 @@
             
 
         </div>
-        <div class="container justify-content-center">
+        <div class="container justify-content-center" >
 
-            <div class="row justify-content-center">
-                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
+            <div class="row justify-content-center" >
+                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()" >
                     Reset
                 </div>
                 <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
@@ -43,6 +43,7 @@
     </body>
     <script>var app = angular.module('myApp', ['ngAnimate']);</script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="js/mainController.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="js/levelController.js" ></script>
     <!--script src="js/mainDirective.js" ></script-->
 </html>
