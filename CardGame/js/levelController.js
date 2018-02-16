@@ -147,31 +147,13 @@ app.controller('mainController', ['$scope', function($scope){
                     $scope.cards[$scope.level][i].pair = false;
                 });
             },0);
-            
-            $(id).css({'position':'fixed'});
-            $(id).animate({
-                left: '45vw',
-                top: '15vw',
-            }, 'slow');
         }
-        
-       //    setTimeout(function(){
-            for(let i = 0 ; i < 16 ; i++){
-                var id = '#img'+$scope.cards[$scope.level][i].img;
-                
-                $(id).animate({
-                    left: 'auto',
-                    top: 'auto',
-                }, 'slow');
-            }
-        //}, 600);
-        var t1 = setTimeout(function(){
-            for(let i = 0 ; i < 16 ; i++){
-                var id = '#img'+$scope.cards[$scope.level][i].img;
-                $(id).css({'position':'static',  'left': 'auto', 'top': 'auto'});
-            
-            }
-        }, 1700);
+        $('.cardArea').css({'transform':'scale(0)'});
+        setTimeout(function(){
+        	$('.cardArea').css({'transform':'scale(1)'});
+        }, 500);
+
+       
        
         $scope.timing = 0.0;
         $scope.start = true;

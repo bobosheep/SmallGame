@@ -14,7 +14,7 @@
         
         <div class="container justify-content-center" >
             <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
-                <div class="row justify-content-around" ng-init="level = 'level2'; coverAllCards(); " >
+                <div class="row justify-content-around cardArea" ng-init="level = 'level2'; coverAllCards(); " >
                     <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
                         <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
                           ng-click="check(rowcard)" id="img{{rowcard.img}}">      
