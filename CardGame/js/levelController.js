@@ -153,15 +153,15 @@ app.controller('mainController', ['$scope', function($scope){
         	$('.cardArea').css({'transform':'scale(1)'});
         }, 500);
 
-       
-       
+        $('.alertBox').css({'transform':'scale(0)'});
+       	
         $scope.timing = 0.0;
         $scope.start = true;
         $scope.openCard = -1;
         clearTimeout(st);
         //clearTimeout(t1);
     };
-$scope.back = function(){
+	$scope.back = function(){
         window.location.href = 'index.html';
     };
     $scope.check = function(id){
@@ -176,24 +176,38 @@ $scope.back = function(){
                 $scope.secondCard = id.name;
                 //console.log(id.img);
                 if($scope.secondCard === $scope.firstCard){
+                	$scope.cards[$scope.level].forEach(function(p, i){
+                		if(p.name === $scope.firstCard){
+                			p.pair = true;
+                       		console.log(p.pair);
+                       	}
+                	});
+                	/*
                     for(let i = 0 ; i < 16 ; i++){
                     var tis = $scope.cards[$scope.level][i];
                         if(tis.name === $scope.firstCard){
                             //console.log(tis.name);
                             $scope.cards[$scope.level][i].pair = true;
                         }
-                    }
+                    }*/
                 }
                 var cnt = 0;
+                $scope.cards[$scope.level].forEach(function(p, i){
+            		if(p.pair){
+            			cnt++;
+                   	}
+            	});
+                /*
                 for(let i = 0; i < 16 ; i++){
                     if($scope.cards[$scope.level][i].pair){
                         cnt++;
                     }
-                }
+                }*/
                 
-                if(cnt === 16){
+                if(cnt === $scope.cards[$scope.level].length){
                     //$scope.$apply();
-                    window.alert('Finish'+ $scope.timing.toFixed(2));
+                    //window.alert('Finish'+ $scope.timing.toFixed(2));
+                    $('.alertBox').css({'transform':'scale(1)'});
                     clearTimeout(st);
                     cnt = 0;
                 }
@@ -209,6 +223,13 @@ $scope.back = function(){
             }
             else if($scope.openCard === 1){
                 
+                $scope.cards[$scope.level].forEach(function(p, i){
+            		if(!p.state && !p.pair){
+            			p.state = true;
+                   	}
+            	});
+
+                /*
                 for(let i = 0 ; i < 16 ; i++){
                     var tis = $scope.cards[$scope.level][i];
                     if(!tis.state && !tis.pair){
@@ -218,9 +239,11 @@ $scope.back = function(){
                         
                     }
                 }
-
+				*/
                 $scope.firstCard = id.name;
                 $scope.openCard++;
+                //id.state = false;
+                
                 setTimeout(function(){
                     $scope.$apply(id.state = false);
                 }, 0);

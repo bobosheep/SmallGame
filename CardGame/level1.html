@@ -10,9 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
     
     <body ng-app="myApp" ng-controller="mainController">
-        <h1 class="level-title txt-center color-light">LEVEL 1</h1>
+        <h1 class="level-title txt-center color-light"> Fun Game<br>LEVEL 1</h1>
         
-        <div style="float: left; color: white;">
+        <div style="float: left; color: white; display: none;">
             <h3>highscore</h3>
         </div>
 
@@ -29,10 +29,11 @@
             <div class="txt-center color-light" style="font-size: 25px;"> 
                 {{ timing.toFixed(2) | number }} sec
             </div>
-            
-            
-
+            <div class="alertBox">
+                You finish in {{ timing.toFixed(2) | number }} seconds!
+            </div>
         </div>
+        
         <div class="container justify-content-center" >
 
             <div class="row justify-content-center" >
@@ -43,6 +44,7 @@
                     Back
                 </div>
             </div>
+
         </div>
 
     </body>

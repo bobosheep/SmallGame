@@ -176,3 +176,16 @@ body{
     background-image: url('http://wallpoper.com/images/00/31/33/51/black-background_00313351.jpg');
     background-size: cover;
 }
+
+.alertBox{
+    position: fixed;
+    display: block;
+    background-color: rgb(225,200, 10);
+    left: 40vw;
+    top: 20vw;
+    width: 20vw;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+fun game
