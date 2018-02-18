@@ -14,6 +14,9 @@ level = {
 	"reverse":1
 };
 
+canv = $('.bg');
+ctx = $('.bg')[0].getContext('2d');
+
 var game = function(){
 	px += xv;
 	py += yv;
@@ -30,7 +33,7 @@ var game = function(){
 		py = 0;
 	}
 	
-	ctx.fillStyle='black';
+	ctx.fillStyle ='black';
 	ctx.fillRect(0, 0, canv.width(), canv.height());
 	
 	ctx.fillStyle='lime';
@@ -98,8 +101,6 @@ var game = function(){
 
 var gamestart = function(){
 
-	canv = $('.bg');
-	ctx = $('.bg')[0].getContext('2d');
 	$('#left').on('click', function (){
 		if(xv != 1){
 			xv = -1;

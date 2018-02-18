@@ -17,10 +17,10 @@
         </div>
 
         <div class="container justify-content-center" >
-            <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
+            <div class="col-sm-6 col-10 offset-sm-3 offset-1  "  > 
                 <div class="row justify-content-around cardArea" ng-init="level = 'level1'; coverAllCards(); " >
                     <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
-                        <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                        <img cards class="circle-img mycard" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
                           ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                         
                     </div>
@@ -38,10 +38,12 @@
 
             <div class="row justify-content-center" >
                 <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()" >
-                    Reset
+                   Reset
+                   <img src="icon/reset.png" width="30px" height="30px" style="margin-left:5px;">
                 </div>
                 <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
-                    Back
+                    Exit
+                    <img src="icon/exit.png" width="30px" height="30px" style="margin-left:5px;padding-top: 3px; padding-bottom: 3px;">
                 </div>
             </div>
 

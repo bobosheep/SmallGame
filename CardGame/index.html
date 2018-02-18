@@ -26,7 +26,11 @@
                     <div class="row justify-content-center " ng-repeat="Level in levels">
                         <div class="col col-md-5 bg-teal f-25"  ng-click="go(Level)">
                             <div class="col bg-darkblue" >Level {{Level.level}}</div>
-                            <p class = "txt-center"><b>{{Level.detail}}</b></p>
+                            
+                            <p class = "col txt-center">
+                                <img src="icon/puzzle.png" width="30px" height="30px" style="margin-top: 3px;margin-right: 10px;">
+                                <b>  {{Level.detail}}</b>
+                            </p>
                         </div>
                     </div>
                 </div>
