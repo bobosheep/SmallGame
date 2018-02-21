@@ -112,4 +112,4 @@ var lvl1 = [{
         state: true
 }];
 
-export lvl1 as level1 ;
+export { lvl1 };

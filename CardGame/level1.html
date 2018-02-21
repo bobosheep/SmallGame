@@ -9,18 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
     
-    <body ng-app="myApp" ng-controller="mainController">
-        <h1 class="level-title txt-center color-light"> Fun Game<br>LEVEL 1</h1>
-        
+    <body ng-app="myApp" ng-controller="levelController">
+        <h1 class="level-title txt-center color-light"> Fun Game<br>Level 1</h1>
         <div style="float: left; color: white; display: none;">
             <h3>highscore</h3>
         </div>
 
         <div class="container justify-content-center" >
-            <div class="col-sm-6 col-10 offset-sm-3 offset-1  "  > 
-                <div class="row justify-content-around cardArea" ng-init="level = 'level1'; coverAllCards(); " >
+            <div class="col-sm-6 col-10 offset-sm-3  offset-1"  > 
+                <div class="row justify-content-around cardArea" ng-init="level='level1'; coverAllCards(); " >
                     <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
-                        <img cards class="circle-img mycard" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                        <img cards class="circle-img mycard level1-card" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
                           ng-click="check(rowcard)" id="img{{rowcard.img}}">      
                         
                     </div>
@@ -29,8 +28,8 @@
             <div class="txt-center color-light" style="font-size: 25px;"> 
                 {{ timing.toFixed(2) | number }} sec
             </div>
-            <div class="alertBox">
-                You finish in {{ timing.toFixed(2) | number }} seconds!
+            <div class="alertBox" style="font-size: 20px;">
+                You finish in <b>{{ timing.toFixed(2) | number }}</b> seconds!
             </div>
         </div>
         
@@ -50,9 +49,7 @@
         </div>
 
     </body>
-    <script>var app = angular.module('myApp', ['ngAnimate']);</script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
     <script src="js/levelController.js" ></script>
-    <!--script src="js/mainDirective.js" ></script-->
 </html>
