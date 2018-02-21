@@ -129,8 +129,6 @@
 }
 
 .mycard{
-    width: 15vw;
-    height: 15vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -163,6 +161,8 @@
 }
 
 .level1-card {
+    width: 15vw;
+    height: 15vw;
     max-width: 100px;
     max-height: 100px;
     min-width: 50px;
@@ -170,6 +170,8 @@
 }
 
 .level2-card {
+    width: 12vw;
+    height: 12vw;
     max-width: 80px;
     max-height: 80px;
     min-width: 40px;

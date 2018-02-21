@@ -17,7 +17,7 @@
         </div>
 
         <div class="container " >
-            <div class="col-sm-10  col-12 offset-sm-1   "  > 
+            <div class="col-sm-10  col-auto offset-sm-1" > 
                 <div class="row justify-content-around cardArea" ng-init="level = 'level2'; coverAllCards(); " >
                     <div class="col-2 mar-5" ng-repeat="rowcard in cards[level] " >
                         <img cards class="circle-img mycard level2-card" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
