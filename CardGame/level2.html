@@ -9,35 +9,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
     
-    <body ng-app="myApp" ng-controller="mainController">
-        <h1 class="level-title txt-center color-light">LEVEL 2</h1>
+    <body ng-app="myApp" ng-controller="levelController">
+        <h1 class="level-title txt-center color-light"> Fun Game<br>LEVEL 2</h1>
         
-        <div class="container justify-content-center" >
-            <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
+        <div style="float: left; color: white; display: none;">
+            <h3>highscore</h3>
+        </div>
+
+        <div class="container " >
+            <div class="col-sm-10  col-12 offset-sm-1   "  > 
                 <div class="row justify-content-around cardArea" ng-init="level = 'level2'; coverAllCards(); " >
-                    <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
-                        <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                    <div class="col-2 mar-5" ng-repeat="rowcard in cards[level] " >
+                        <img cards class="circle-img mycard level2-card" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
                           ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                        
                     </div>
                 </div>
             </div>
             <div class="txt-center color-light" style="font-size: 25px;"> 
                 {{ timing.toFixed(2) | number }} sec
             </div>
-            
-            
-
+            <div class="alertBox" style="font-size: 20px;">
+                You finish in <b>{{ timing.toFixed(2) | number }}</b> seconds!
+            </div>
         </div>
+        
         <div class="container justify-content-center" >
 
-            <div class="row justify-content-center" ">
-                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
-                    Reset
+            <div class="row justify-content-center" >
+                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()" >
+                   Reset
+                   <img src="icon/reset.png" width="30px" height="30px" style="margin-left:5px;">
                 </div>
                 <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
-                    Back
+                    Exit
+                    <img src="icon/exit.png" width="30px" height="30px" style="margin-left:5px;padding-top: 3px; padding-bottom: 3px;">
                 </div>
             </div>
+
         </div>
 
     </body>
@@ -45,5 +54,4 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
     <script src="js/levelController.js" ></script>
-    <!--script src="js/mainDirective.js" ></script-->
 </html>

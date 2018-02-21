@@ -1,3 +1,4 @@
+var app = angular.module('myApp', []);
 app.controller('mainController', ['$scope', function($scope){
     $scope.levels = [{
         level: '1',
@@ -19,8 +20,7 @@ app.controller('mainController', ['$scope', function($scope){
     }];
     
     $scope.go = function(l){
-        window.location.href = 'level' + l.level + '.html';
-        
+        window.location = 'level' + l+'.html';
     };
     
     
