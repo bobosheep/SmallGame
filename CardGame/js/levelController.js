@@ -7,112 +7,112 @@ app.controller('levelController', ['$scope', function($scope){
 	        img: '1',
 	        name: 'orange',
 	        src: 'image/level1/orange.jpg',
-	        or_src: 'image/ccu.png',
+	        or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '2',
 	        name: 'banana',
 	        src: 'image/level1/banana.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 			pair: false,
 	        state: true
 	    },{
 	        img: '3',
 	        name: 'apple',
 	        src: 'image/level1/apple.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '4',
 	        name: 'strawberry',
 	        src: 'image/level1/strawberry.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '5',
 	        name: 'orange',
 	        src: 'image/level1/orange.jpg',
-	        or_src: 'image/ccu.png',
+	        or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '6',
 	        name: 'banana',
 	        src: 'image/level1/banana.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '7',
 	        name: 'apple',
 			src: 'image/level1/apple.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '8',
 	        name: 'strawberry',
-	        src: 'imagelevel1//strawberry.jpg',
-			or_src: 'image/ccu.png',
+	        src: 'image/level1/strawberry.jpg',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '9',
 	        name: 'watermelon',
 	        src: 'image/level1/watermelon.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '10',
 	        name: 'grape',
 	        src: 'image/level1/grape.png',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '11',
 	        name: 'guava',
 	        src: 'image/level1/guava.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '12',
 	        name: 'lemon',
 	        src: 'image/level1/lemon.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '13',
 	        name: 'watermelon',
 	        src: 'image/level1/watermelon.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '14',
 	        name: 'grape',
 	        src: 'image/level1/grape.png',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '15',
 	        name: 'guava',
 	        src: 'image/level1/guava.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 	    },{
 	        img: '16',
 	        name: 'lemon',
 	        src: 'image/level1/lemon.jpg',
-			or_src: 'image/ccu.png',
+			or_src: 'image/CCU.png',
 	        pair: false,
 	        state: true
 		}],
