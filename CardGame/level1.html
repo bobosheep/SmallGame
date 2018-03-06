@@ -1,6 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Open the Card!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
@@ -20,7 +22,7 @@
                 <div class="row justify-content-around cardArea" ng-init="level='level1'; coverAllCards(); " >
                     <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
                         <img cards class="circle-img mycard level1-card" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
-                          ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+                          ng-click="check(rowcard)" id="img{{rowcard.img}}" alt="{{rowcard.name}}">      
                         
                     </div>
                 </div>
@@ -38,11 +40,11 @@
             <div class="row justify-content-center" >
                 <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()" >
                    Reset
-                   <img src="icon/reset.png" width="30px" height="30px" style="margin-left:5px;">
+                   <img src="icon/reset.png" alt="reset" width="30px" height="30px" style="margin-left:5px;">
                 </div>
                 <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
                     Exit
-                    <img src="icon/exit.png" width="30px" height="30px" style="margin-left:5px;padding-top: 3px; padding-bottom: 3px;">
+                    <img src="icon/exit.png" alt="exit" width="30px" height="30px" style="margin-left:5px;padding-top: 3px; padding-bottom: 3px;">
                 </div>
             </div>
 
@@ -50,6 +52,6 @@
 
     </body>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>    
     <script src="js/levelController.js" ></script>
 </html>

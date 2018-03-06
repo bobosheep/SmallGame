@@ -3,6 +3,8 @@
 <html lang='en'>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Play Cards!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -27,7 +29,7 @@
                             <div class="col bg-darkblue" >Level {{Level.level}}</div>
                             
                             <p class = "col txt-center">
-                                <img src="icon/puzzle.png" width="30px" height="30px" style="margin-top: 3px;margin-right: 10px;">
+                                <img src="icon/puzzle.png" alt="puzzle" width="30px" height="30px" style="margin-top: 3px;margin-right: 10px;">
                                 <b>  {{Level.detail}}</b>
                             </p>
                         </div>
@@ -40,6 +42,7 @@
         </div>    
     </body>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script src="js/mainController.js" ></script>
     <!--script src="js/levelController.js" ></script>
     <script src="js/mainDirective.js" ></script-->

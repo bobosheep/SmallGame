@@ -2,25 +2,31 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="CardGame/css/main.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FunGames</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     </head>
     <body>
-        <h2 class="txt-center" style="color:bisque;">Let's Play Game</h2>
-        <br>
-        <br>
-            
-        <div class="container justify-content-center">
-            <p class="col-sm-3 col-6 bg-red txt-center circle-img" 
-                onclick="window.location.href='GreedySnake/index.html'"
-                style="margin-left:auto;margin-right:auto;">
-                Greedy Snake
-            </p>
-            <p class="col-sm-3 col-6 bg-orange txt-center circle-img" 
-                onclick="window.location.href='CardGame/index.html'"
-                style="margin-left:auto;margin-right:auto;">
-                Card Game
-            </p>
-        </div>
+        <header class="header">
+            <h2 class="txt-center" style="color:bisque;">Let's Play Game</h2>
+            <br>
+            <br>
+        </header>
+        <main class="main">
+            <div class="container justify-content-center">
+                <p class="col-sm-3 col-6 bg-red txt-center circle-img" 
+                    onclick="window.location.href='GreedySnake/index.html'"
+                    style="margin-left:auto;margin-right:auto;">
+                    Greedy Snake
+                </p>
+                <p class="col-sm-3 col-6 bg-orange txt-center circle-img" 
+                    onclick="window.location.href='CardGame/index.html'"
+                    style="margin-left:auto;margin-right:auto;">
+                    Card Game
+                </p>
+            </div>
+        </main>
     </body>
+    <script src="app.js" async></script>
 </html>
