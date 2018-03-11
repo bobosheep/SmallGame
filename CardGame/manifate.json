@@ -1,0 +1,22 @@
+{
+    "short_name": "Open!",
+    "name": "Open The Cards",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "favicon.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "index.html?launcher=true"
+  }
