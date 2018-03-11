@@ -18,6 +18,8 @@
         "sizes": "192x192"
       }
     ],
-    "start_url": "index.html?launcher=true",
-    "display": "standalone"
+    "theme_color": "black",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
   }
