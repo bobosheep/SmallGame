@@ -1,6 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Level2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
@@ -9,41 +11,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     
-    <body ng-app="myApp" ng-controller="mainController">
-        <h1 class="level-title txt-center color-light">LEVEL 3</h1>
-        
-        <div class="container justify-content-center" >
-            <div class="col-sm-6 col-7 offset-sm-3 offset-2  "  > 
-                <div class="row justify-content-around cardArea" ng-init="level = 'level3'; coverAllCards(); " >
-                    <div class="col-3 mar-5" ng-repeat="rowcard in cards[level] " >
-                        <img cards class="circle-img " ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
-                          ng-click="check(rowcard)" id="img{{rowcard.img}}">      
+    <body ng-app="myApp" ng-controller="levelController">
+        <header class = "header">
+            <h1 class="level-title txt-center color-light"> Fun Game<br>LEVEL 3</h1>
+        </header>
+        <div style="float: left; color: white; display: none;">
+            <h3>highscore</h3>
+        </div>
+
+        <main class="main">
+            <div class="container " >
+                <div class="col-sm-10  col-auto offset-sm-1" > 
+                    <div class="row justify-content-around cardArea" ng-init="level = 'level3'; coverAllCards(); " >
+                        <div class="col-2 mar-5" ng-repeat="rowcard in cards[level] " >
+                            <img cards class="circle-img mycard level2-card" ng-src="{{rowcard.state ? rowcard.or_src : rowcard.src}}" 
+                            ng-click="check(rowcard)" id="img{{rowcard.img}}" alt="{{rowcard.name}}">      
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="txt-center color-light" style="font-size: 25px;"> 
-                {{ timing.toFixed(2) | number }} sec
+                <div class="txt-center color-light" style="font-size: 25px;"> 
+                    {{ timing.toFixed(2) | number }} sec
+                </div>
+                <div class="alert alert-success alertBox" style="font-size: 20px;">
+                    You finish in <b>{{ timing.toFixed(2) | number }}</b> seconds!
+                </div>
             </div>
             
-            
+            <div class="container justify-content-center" >
 
-        </div>
-        <div class="container justify-content-center" >
-
-            <div class="row justify-content-center" >
-                <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()">
+                <div class="row justify-content-center" >
+                    <div class="col-2 circle-img bg-teal txt-center" ng-click="coverAllCards()" >
                     Reset
+                    <img src="icon/reset.png" alt="reset" width="30px" height="30px" style="margin-left:5px;">
+                    </div>
+                    <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
+                        Exit
+                        <img src="icon/exit.png" alt="exit" width="30px" height="30px" style="margin-left:5px;padding-top: 3px; padding-bottom: 3px;">
+                    </div>
                 </div>
-                <div class="col-2 circle-img bg-red txt-center " ng-click="back()">
-                    Back
-                </div>
+
             </div>
-        </div>
+        </main>
 
     </body>
     <script>var app = angular.module('myApp', ['ngAnimate']);</script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
     <script src="js/levelController.js" ></script>
-    <!--script src="js/mainDirective.js" ></script-->
 </html>

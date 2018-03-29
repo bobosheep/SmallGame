@@ -371,7 +371,7 @@ app.controller('levelController', ['$scope', function($scope){
         	$('.cardArea').css({'transform':'scale(1)'});
         }, 500);
 
-        $('.alertBox').css({'transform':'scale(0)'});
+        $('.alert').css({'transform':'scale(0)'});
        	
         $scope.timing = 0.0;
         $scope.start = true;
@@ -412,7 +412,7 @@ app.controller('levelController', ['$scope', function($scope){
                 
                 
                 if(cnt === $scope.cards[$scope.level].length){
-                    $('.alertBox').css({'transform':'scale(1)'});
+                    $('.alert').css({'transform':'scale(1)'});
                     clearTimeout(st);
                     cnt = 0;
                 }
