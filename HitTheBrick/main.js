@@ -7,12 +7,12 @@ let centerX = canvas.width / 2, centerY = canvas.height / 2;
 let ballx = centerX, bally = centerY;
 let  paddleWidth = 80, paddleHeight = 10,    
     paddlex = centerX - paddleWidth / 2, paddley = canvas.height - 20; 
-let dx = 2, dy = 2, paddledx = 3;
+let dx = 5, dy = 5, paddledx = 7;
 let radius = 10;
-let lpress = false, rpress = false;
-let bricksOffsetLeft = 30, bricksOffsetTop = 30, bircksPadding = 10;
-let bricksWidth = 50, bricksHeight = 20;
-let totalBricks = 15, bricksRow = 3, bricksColumn = 7;
+let lpress = false, rpress = false, enterpress = false;
+let bricksOffsetLeft = 20, bricksOffsetTop = 30, bircksPadding = 10;
+let bricksWidth = 55, bricksHeight = 20;
+let bricksRow = 3, bricksColumn = 7, totalBricks = bricksRow * bricksColumn;
 let bricks = [];
 
 let score = 0;
@@ -37,6 +37,8 @@ kdown = (e) => {
         rpress = true;
     else if (e.keyCode == 37)
         lpress = true;
+    else if (e.keyCode == 13)
+        enterpress = true;
 }
 
 kup = (e) => {
@@ -44,6 +46,8 @@ kup = (e) => {
         rpress = false;
     else if (e.keyCode == 37)
         lpress = false;
+    else if (e.keyCode == 13)
+        enterpress = false;
 }
 
 document.addEventListener("keydown", kdown, false);
@@ -113,6 +117,55 @@ CollisionDetect = () =>{
     }
 }
 
+DrawGameOver = (stat)=>{
+    ctx.beginPath();
+    ctx.rect(centerX - 100, centerY - 40, 200, 100);
+    if(stat){
+        //Finish!!
+        ctx.fillStyle = "#52f96e";
+        ctx.fill();
+        
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "#050505";
+        ctx.fillText("Congratulations !", centerX - 75,  centerY);
+
+        ctx.closePath();
+        ctx.beginPath();
+
+        ctx.rect(centerX - 50, centerY + 20, 100, 30);
+        ctx.fillStyle = "#ffff84"
+        ctx.fill();
+        
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#050505";
+        ctx.fillText("Again", centerX - 18,  centerY + 40);
+        
+        ctx.closePath();
+    }
+    else{
+        //Fail
+        ctx.fillStyle = "#fc203e";
+        ctx.fill();
+
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "#050505";
+        ctx.fillText("GameOver...", centerX - 60,  centerY);
+        
+        ctx.closePath();
+        ctx.beginPath();
+
+        ctx.rect(centerX - 50, centerY + 20, 100, 30);
+        ctx.fillStyle = "#ffff84"
+        ctx.fill();
+        
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#050505";
+        ctx.fillText("Retry", centerX - 18,  centerY + 40);
+
+        ctx.closePath();
+    }
+}
+
 
 Draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -125,9 +178,9 @@ Draw = () => {
         dx = rpress ? Math.abs(dx) : -Math.abs(dx);
         game_status = 0;
     }        
-    if(lpress && paddlex > 0)  
+    if(lpress && paddlex > 0 && game_status == status.playing)  
         paddlex -= paddledx;
-    if(rpress && paddlex + paddleWidth < canvas.width)
+    if(rpress && paddlex + paddleWidth < canvas.width && game_status == status.playing) 
         paddlex += paddledx;
     if( ( ballx - radius < paddlex + paddleWidth && ballx > paddlex && bally >= paddley && bally <= paddley +  paddleHeight) ||
         ( ballx + radius > paddlex && ballx < paddlex && bally >= paddley && bally <= paddley +  paddleHeight) ||
@@ -137,14 +190,24 @@ Draw = () => {
         || dy + bally - radius < 0)
         dy = -dy;
     if(dy + bally + radius > canvas.height){
-        ballx = centerX, bally = centerY;
+        DrawGameOver(0);
+        game_status = 1;
+    }
+    if(score == totalBricks){
+        DrawGameOver(1);
+        game_status = 1;
+    }
+
+    if(game_status == status.gameover && enterpress){
         Init();
         score = 0;
+        game_status = -1;
     }
-    
     if(game_status == status.playing){
         ballx += dx;
         bally += dy;
     }
+
+    requestAnimationFrame(Draw);
 }
-setInterval(Draw, 10);
+Draw();
